@@ -10,6 +10,8 @@
 		42580E578633341E47F7E5A6 /* Pods_flix_demo_03.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E604964924F677B251C7CF /* Pods_flix_demo_03.framework */; };
 		74C1C8F2CD42E00C3A47B291 /* Pods_flix_demo_03Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66B4FDC44F72438220350BC /* Pods_flix_demo_03Tests.framework */; };
 		789D5C3D35A530C4B6405896 /* Pods_flix_demo_03UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1224474258FB4AC9945CBFAA /* Pods_flix_demo_03UITests.framework */; };
+		ED1D23421EF5E21400C51ACC /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1D23411EF5E21400C51ACC /* PosterCell.swift */; };
+		ED1D23441EF5E2AC00C51ACC /* SuperheroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1D23431EF5E2AC00C51ACC /* SuperheroViewController.swift */; };
 		ED28D96E1EF4BC7F00AB25C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED28D96D1EF4BC7F00AB25C2 /* AppDelegate.swift */; };
 		ED28D9731EF4BC7F00AB25C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED28D9711EF4BC7F00AB25C2 /* Main.storyboard */; };
 		ED28D9751EF4BC7F00AB25C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED28D9741EF4BC7F00AB25C2 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		B54E1774F451F6A61787730A /* Pods-flix_demo_03Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flix_demo_03Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-flix_demo_03Tests/Pods-flix_demo_03Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C66B4FDC44F72438220350BC /* Pods_flix_demo_03Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flix_demo_03Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF2D6FC1F9A2EC3B6FD37D1E /* Pods-flix_demo_03.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flix_demo_03.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flix_demo_03/Pods-flix_demo_03.debug.xcconfig"; sourceTree = "<group>"; };
+		ED1D23411EF5E21400C51ACC /* PosterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
+		ED1D23431EF5E2AC00C51ACC /* SuperheroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperheroViewController.swift; sourceTree = "<group>"; };
 		ED28D96A1EF4BC7F00AB25C2 /* flix_demo_03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flix_demo_03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED28D96D1EF4BC7F00AB25C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED28D9721EF4BC7F00AB25C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 			children = (
 				ED28D99B1EF4CE8800AB25C2 /* NowPlayingViewController.swift */,
 				ED28D9A11EF4E2B800AB25C2 /* DetailViewController.swift */,
+				ED1D23431EF5E2AC00C51ACC /* SuperheroViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				ED28D99D1EF4D93400AB25C2 /* MovieCell.swift */,
+				ED1D23411EF5E21400C51ACC /* PosterCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -472,6 +478,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED28D99C1EF4CE8800AB25C2 /* NowPlayingViewController.swift in Sources */,
+				ED1D23421EF5E21400C51ACC /* PosterCell.swift in Sources */,
+				ED1D23441EF5E2AC00C51ACC /* SuperheroViewController.swift in Sources */,
 				ED28D96E1EF4BC7F00AB25C2 /* AppDelegate.swift in Sources */,
 				ED28D99E1EF4D93400AB25C2 /* MovieCell.swift in Sources */,
 				ED28D9A21EF4E2B800AB25C2 /* DetailViewController.swift in Sources */,
