@@ -9,7 +9,7 @@
 import UIKit
 import AlamofireImage
 
-class NowPlayingViewController: UIViewController, UITableViewDataSource {
+class NowPlayingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
 
    @IBOutlet weak var tableView: UITableView!
@@ -24,7 +24,11 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
       refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didPullToRefresh(_:)), for: .valueChanged)
       tableView.insertSubview(refreshControl, at: 0)
 
+      tableView.rowHeight = UITableViewAutomaticDimension
+      tableView.estimatedRowHeight = 50
+
       tableView.dataSource = self
+      tableView.delegate = self
       fetchMovies()
 
    }
@@ -32,6 +36,10 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
    func didPullToRefresh(_ refreshControl: UIRefreshControl) {
 
       fetchMovies()
+   }
+
+   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      tableView.deselectRow(at: indexPath, animated: true)
    }
 
    func fetchMovies() {
@@ -48,9 +56,11 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
             self.movies = movies
             self.tableView.reloadData()
             self.refreshControl.endRefreshing()
+
          }
       }
       task.resume()
+
    }
 
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -72,6 +82,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
 
       let posterURL = URL(string: baseURLString + posterPathString)!
       cell.posterImageView.af_setImage(withURL: posterURL)
+      
 
 
       return cell
